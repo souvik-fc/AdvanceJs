@@ -9,10 +9,10 @@ module.exports = function(grunt) {
                        }
                },
                jshint: {
-            myFiles: ['js/amitabh/*.js']
+            myFiles: ['amitabh/js/*.js']
         }
        });
        grunt.loadNpmTasks('grunt/node_modules/grunt-contrib-jasmine');
        grunt.loadNpmTasks('grunt/node_modules/grunt-contrib-jshint');
-       grunt.registerTask('lint', ['jshint', 'jasmine']);
+       grunt.registerTask('lint', ['jshint']);
 };
