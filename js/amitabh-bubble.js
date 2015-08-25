@@ -12,6 +12,11 @@ window.onload = function() {
 		paper.text(120,410,"Games");
 		var country=paper.rect(50,500,50,20).attr({fill:"skyblue"});
 		paper.text(120,510,"India");
+		var mood=paper.rect(50,600,50,20).attr({fill:"pink"});
+		paper.text(120,610,"Mood");
+		var other=paper.rect(50,700,50,20).attr({fill:"purple"});
+		paper.text(120,710,"other");
+
 
 
 
@@ -22,8 +27,8 @@ window.onload = function() {
 		var step = 2*Math.PI/50;
 		console.log(2*Math.PI);
 		        var theta=0;
-        console.log(fam.kbc.length);
-	 	for(i=0;i<fam.arr.length;i++){
+        console.log(fam.film.length);
+	 	for(i=0;i<fam.alltwt.length;i++){
 	 		//debugger;
          
 			
@@ -38,7 +43,7 @@ window.onload = function() {
 			       var y = k - r*Math.sin(theta);    //note 2.
 		       //ctx.lineTo(x,y);
 			     		
-		      bubble(x,y,10,"red",fam.arr[i].text);
+		      bubble(x,y,fam.alltwt[i].retweet_count/80,fam.alltwt[i].color,fam.alltwt[i].text);
 	      theta+=step;
 	            }
 	         else{
